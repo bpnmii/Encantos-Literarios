@@ -14,7 +14,6 @@
   .cards {
     margin-top: 2rem;
     display: flex;
-   
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -26,7 +25,7 @@
         z-index: 1;
         border: 1px solid var(--pink-dark);
         li {
-          background: url(../assets/stars-purple.svg) no-repeat;
+          background: url(../Assets/stars-purple.svg) no-repeat;
           list-style: none;
         }
 
@@ -46,11 +45,42 @@
         }
       }
     }
-
+  }
 
   h2 {
     font-size: 1.25rem;
     margin-top: 0;
+  }
+
+  .card {
+    width: 25rem;
+    border: 1px solid var(--blue-dark);
+    background-color: var(--blue-low);
+    border-radius: 20px;
+    padding: 1rem;
+
+    opacity: 0;
+    transform: translateY(2rem);
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+
+    h3 {
+      font: var(--title-xs);
+
+      color: var(--blue-light);
+    }
+
+    encantos-pricing {
+      display: block;
+      font: var(--title-md);
+      color: var(--text-title);
+
+      small {
+        font-size: 1rem;
       }
     }
 
@@ -59,7 +89,7 @@
     }
     li {
       list-style: none;
-      background: url(../assets/star-list.svg) no-repeat;
+      background: url(../Assets/star-list.svg) no-repeat;
       padding: 0.65rem 2rem;
       font: var(--body-xs);
       color: var(--text-body);
@@ -74,7 +104,6 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-     
       border: none;
       background-color: var(--blue-dark);
       transition: 0.5s;
@@ -85,7 +114,18 @@
         background-color: var(--blue-light);
       }
     }
-  
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (width >= 80em) {
