@@ -1,0 +1,109 @@
+.price {
+  margin-top: 15rem;
+
+  & header {
+    text-align: center;
+
+    h1 {
+      font: 700 1.5rem/1.5 "Raleway", sans-serif;
+      color: var(--text-body);
+      margin-bottom: 3rem;
+    }
+  }
+
+  .cards {
+    margin-top: 2rem;
+    display: flex;
+   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .premium {
+      position: relative;
+      .card {
+        z-index: 1;
+        border: 1px solid var(--pink-dark);
+        li {
+          background: url(../assets/stars-purple.svg) no-repeat;
+          list-style: none;
+        }
+
+        h3 {
+          color: var(--pink-dark);
+        }
+      }
+
+      .bunny {
+        img {
+          z-index: -1;
+          position: absolute;
+          top: -7%;
+          right: 100%;
+          rotate: -50deg;
+          bottom: 5%;
+        }
+      }
+    }
+
+
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+      }
+    }
+
+    ul {
+      margin-bottom: 4rem;
+    }
+    li {
+      list-style: none;
+      background: url(../assets/star-list.svg) no-repeat;
+      padding: 0.65rem 2rem;
+      font: var(--body-xs);
+      color: var(--text-body);
+      margin-top: 1rem;
+      margin-right: 1rem;
+    }
+
+    button {
+      font: var(--button);
+      padding: 1rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+     
+      border: none;
+      background-color: var(--blue-dark);
+      transition: 0.5s;
+      border-radius: 10px;
+      color: var(--text-body);
+
+      &:hover {
+        background-color: var(--blue-light);
+      }
+    }
+  
+}
+
+@media (width >= 80em) {
+  .price .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .price .card {
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .price .card button {
+    margin-top: auto;
+  }
+}
